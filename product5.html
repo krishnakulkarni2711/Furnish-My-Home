@@ -12,83 +12,163 @@
             background-color: #f7f7f7;
         }
         .container {
-            width: 80%;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
         h1 {
             text-align: center;
             color: #333;
+            margin: 20px 0;
+            font-size: 24px;
         }
-        .product-details {
-            display: flex;
-            justify-content: space-between;
-        }
-        .product-image {
-            flex: 1;
-            padding-right: 20px;
-        }
-        .product-image img {
+        .product-details img {
             width: 100%;
-            border-radius: 8px;
-        }
-        .product-info {
-            flex: 1;
-        }
-        .product-name {
-            font-size: 2em;
-            margin: 10px 0;
-            color: #333;
+            max-width: 600px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
         }
         .product-price {
             font-size: 1.5em;
             color: #666;
-            margin-bottom: 15px;
+            margin: 15px 0;
+            text-align: center;
         }
         .product-description {
-            font-size: 1em;
+            font-size: 1.1em;
             color: #555;
             margin-bottom: 20px;
+            text-align: center;
         }
-        .sales-btn {
-            padding: 10px 20px;
+        .talk-to-sales {
+            display: block;
+            margin: 0 auto;
+            padding: 12px 25px;
             text-decoration: none;
             border-radius: 5px;
-            margin: 5px;
+            background-color: #ff5722;
+            color: white;
+            text-align: center;
+            cursor: pointer;
+            font-size: 16px;
+            width: fit-content;
+        }
+        .talk-to-sales:hover {
+            background-color: #e64a19;
+        }
+        #dialog-box {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 300px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            text-align: center;
+        }
+        #dialog-box p {
+            margin-bottom: 20px;
+        }
+        #dialog-box a {
+            color: #007bff;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+        #dialog-box a:hover {
+            text-decoration: underline;
+        }
+        .close-btn {
             background-color: #007bff;
             color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
         }
-        .sales-btn:hover {
+        .close-btn:hover {
             background-color: #0056b3;
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 22px;
+            }
+            .container {
+                padding: 15px;
+            }
+            .product-price {
+                font-size: 1.3em;
+            }
+            .product-description {
+                font-size: 1em;
+            }
+            .talk-to-sales {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+            #dialog-box {
+                width: 90%;
+                padding: 15px;
+            }
+            .close-btn {
+                padding: 6px 12px;
+                font-size: 14px;
+            }
+        }
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 20px;
+            }
+            .product-price {
+                font-size: 1.2em;
+            }
+            .product-description {
+                font-size: 0.9em;
+            }
+            .talk-to-sales {
+                padding: 8px 18px;
+                font-size: 12px;
+            }
         }
     </style>
 </head>
 <body>
-
-    <div class="container">
-        <h1>Dunwell Dual Power Reclining Sofa, Loveseat and Recliner Set</h1>
-
+<h1>Dunwell Dual Power Reclining Sofa, Loveseat and Recliner Set</h1>
         <div class="product-details">
-            <div class="product-image">
-                <img src="https://cdn.rencdn.com/ashley/high/51601-15-OPEN-SW.jpg" alt="Dunwell Dual Power Reclining Sofa, Loveseat and Recliner Set">
-            </div>
-
-            <div class="product-info">
-                <h2 class="product-name">Dunwell Dual Power Reclining Sofa, Loveseat and Recliner Set</h2>
-                <p class="product-price">$3,399.99</p>
-                <p class="product-description">
-                    There is power in beauty with the Dunwell power reclining sofa, loveseat and recliner set. Handsome crackle effect in the upholstery gives the appearance of supple leather but this set is all about the warmth of fabric. Contrast jumbo stitching adds a stylish touch, while double stuffed armrests cradle your body in comfort. Rest assured, Easy View™ power adjustable headrests allow you to adjust your head and recline back with one easy touch.
-                    <br><br>
-                    Dimensions:<br>
-                    Loveseat: 77" x 39" x 41"<br>
-                    Recliner: 40" x 39" x 41"<br>
-                    Sofa: 87" x 39" x 41"
-                </p>
-
-                <a href="https://vapi.ai?demo=true&shareKey=54bc38a3-ee48-4196-aca1-9c69eab79d1e&assistantId=c5492f00-8ca1-4608-b770-c1c82d147e24" class="sales-btn" target="_blank">Talk to Sales</a>
-            </div>
+            <img src="https://cdn.rencdn.com/ashley/high/51601-15-OPEN-SW.jpg" alt="Dunwell Dual Power Reclining Sofa, Loveseat and Recliner Set">
+            <p class="product-price">$3,399.99</p>
+            <p class="product-description">There is power in beauty with the Dunwell power reclining sofa, loveseat and recliner set. Handsome crackle effect in the upholstery gives the appearance of supple leather but this set is all about the warmth of fabric. Contrast jumbo stitching adds a stylish touch, while double stuffed armrests cradle your body in comfort. Rest assured, Easy View™ power adjustable headrests allow you to adjust your head and recline back with one easy touch.<br><br>Dimensions:<br>
+            PWR REC Loveseat/CON/ADJ HDRST:<br>
+            Width: 77.00 in Depth: 39.00 in Height: 41.00 in<br>
+            PWR Rocker REC/ADJ Headrest:<br>
+            Width: 40.00 in Depth: 39.00 in Height: 41.00 in<br>
+            PWR REC Sofa with ADJ Headrest:<br>
+            Width: 87.00 in Depth: 39.00 in Height: 41.00 in
+            </p>
+            <button class="talk-to-sales" onclick="showDialog()">Talk to Sales</button>
         </div>
     </div>
+
+    <!-- Dialog Box -->
+    <div id="dialog-box">
+        <p>Call us Toll-free on <a href="tel:+16265873032">+1 (626) 587 3032</a></p>
+        <button class="close-btn" onclick="closeDialog()">Close</button>
+    </div>
+
+    <script>
+        function showDialog() {
+            document.getElementById('dialog-box').style.display = 'block';
+        }
+        function closeDialog() {
+            document.getElementById('dialog-box').style.display = 'none';
+        }
+    </script>
 
 </body>
 </html>

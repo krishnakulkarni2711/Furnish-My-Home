@@ -47,6 +47,13 @@
             position: absolute;
             top: 20px;
             left: 20px;
+            font-size: 1em;
+            color: blue;
+        }
+        .back-button-bottom {
+            margin-top: 20px;
+            font-size: 1em;
+            color: blue;
         }
         #dialog-box {
             display: none;
@@ -66,9 +73,7 @@
 </head>
 <body>
 
-    <button class="back-button" onclick="window.location.href='index.html'">
-        <img src="reverse-arrow.png" alt="Back" style="width: 24px; height: 24px;">
-    </button>
+    <button class="back-button" onclick="window.location.href='index.html'">Back</button>
 
     <div class="container">
         <h1>Kananwood Sofa, Loveseat, Chair and Ottoman</h1>
@@ -87,6 +92,7 @@
             </p>
             <button class="talk-to-sales" onclick="showDialog()">Talk to Sales</button>
         </div>
+        <button class="back-button-bottom" onclick="window.location.href='index.html'">Back</button>
     </div>
 
     <div id="dialog-box">
